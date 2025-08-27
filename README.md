@@ -12,6 +12,10 @@ Este projeto tem como objetivo a modelagem e implementação de um banco de dado
 - Relacionamentos entre tabelas
 - Inserção de pelo menos 10 dados em cada tabela
 - Consultas para extração de informações relevantes
+- Alterações, modificações e adições conforme solicitado nas aulas
+- Adição de índices e especificações like's
+- Verifição com explain's e analyze's
+- Relacionamentos com os join's
 - Diagrama conceitual modelo entidade-relacionamento (ER) no Draw Io
 
 ---
@@ -70,7 +74,16 @@ Algumas consultas desse projeto:
 - Listar todas os endereços no sistema
 - Verificar os pedidos realizados pelos respectivos usuários
 - Verificar os pedidos e os produtos contidos nele realizados pelos respectivos usuários
+- Relacionar produtos com usuarios
+- Relacionar produtos com pedidos
 ---
+
+graph LR
+U[usuário] -->|1:N| P[pedido]
+U -->|1:1| E[endereço]
+F[funcionário] -->|1:1| E
+P -->|N:M| PR[produto]
+P -->|1:1| E
 
 ## ⚙️ Como Executar
 
